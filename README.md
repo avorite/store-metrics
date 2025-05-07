@@ -63,7 +63,7 @@ A: Yes, the plugin works with WordPress multisite installations.
 
 ## Credits
 
-Developed by Maxim Shyian (https://greenlime.co.il)
+Developed by Maxim Shyian
 
 ## License
 
