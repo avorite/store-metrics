@@ -3,7 +3,3 @@
 
 # Ignore rar archives
 *.rar
-
-# Ignore Cursor files and folders
-.cursor/
-*.cursorrules
