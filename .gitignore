@@ -1,0 +1,8 @@
+# Ignore zip archives
+*.zip
+
+# Ignore cursor folder
+cursor/
+
+# Ignore Cursor rules files
+*.cursorules 
