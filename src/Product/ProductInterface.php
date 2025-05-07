@@ -17,5 +17,5 @@ interface ProductInterface {
      * @param int $product_id Product ID.
      * @return float Cost price or 0 if not set.
      */
-    public function get_product_cost_price( $product_id );
+    public function get_product_cost_price( int $product_id ): float;
 } 

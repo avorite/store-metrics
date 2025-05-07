@@ -23,7 +23,7 @@ class SettingsManager implements SettingsInterface {
      *
      * @return void
      */
-    public function register_settings() {
+    public function register_settings(): void {
         if (!current_user_can('manage_woocommerce')) {
             return;
         }
@@ -76,7 +76,7 @@ class SettingsManager implements SettingsInterface {
      * @param array $input Input data.
      * @return array Sanitized data.
      */
-    public function sanitize_monthly_data( $input ) {
+    public function sanitize_monthly_data( array $input ): array {
         if ( !is_array( $input ) ) {
             return array();
         }
@@ -107,7 +107,7 @@ class SettingsManager implements SettingsInterface {
      * @param int $month Month.
      * @return float
      */
-    public function get_monthly_value( $option_name, $year, $month ) {
+    public function get_monthly_value( string $option_name, int $year, int $month ): float {
         $monthly_data = get_option( $option_name . '_monthly', array() );
         $key = $year . '-' . str_pad( $month, 2, '0', STR_PAD_LEFT );
         return isset( $monthly_data[$key] ) ? floatval( $monthly_data[$key] ) : 0;
@@ -118,7 +118,7 @@ class SettingsManager implements SettingsInterface {
      *
      * @return void
      */
-    public function pr_budget_callback() {
+    public function pr_budget_callback(): void {
         $year = isset( $_GET['store_metrics_year'] ) ? intval( $_GET['store_metrics_year'] ) : date( 'Y' );
         $month = isset( $_GET['store_metrics_month'] ) ? intval( $_GET['store_metrics_month'] ) : date( 'n' );
         $key = $year . '-' . str_pad( $month, 2, '0', STR_PAD_LEFT );
@@ -145,7 +145,7 @@ class SettingsManager implements SettingsInterface {
      *
      * @return void
      */
-    public function additional_costs_callback() {
+    public function additional_costs_callback(): void {
         $year = isset( $_GET['store_metrics_year'] ) ? intval( $_GET['store_metrics_year'] ) : date( 'Y' );
         $month = isset( $_GET['store_metrics_month'] ) ? intval( $_GET['store_metrics_month'] ) : date( 'n' );
         $key = $year . '-' . str_pad( $month, 2, '0', STR_PAD_LEFT );

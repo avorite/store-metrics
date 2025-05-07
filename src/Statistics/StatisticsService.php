@@ -55,7 +55,7 @@ class StatisticsService implements StatisticsInterface {
      *
      * @return void
      */
-    public function handle_refresh_stats() {
+    public function handle_refresh_stats(): void {
         // Verify nonce.
         if ( ! isset( $_POST['store_metrics_nonce'] ) || ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['store_metrics_nonce'] ) ), 'store_metrics_refresh_action' ) ) {
             wp_die( esc_html__( 'Nonce verification failed', 'store-metrics' ) );
@@ -85,7 +85,7 @@ class StatisticsService implements StatisticsInterface {
      * @param int $limit Limit.
      * @return array
      */
-    public function get_top_products( $year, $month, $limit = 5 ) {
+    public function get_top_products( int $year, int $month, int $limit = 5 ): array {
         $args = array(
             'limit'      => -1,
             'status'     => $this->get_valid_order_statuses(),
@@ -148,7 +148,7 @@ class StatisticsService implements StatisticsInterface {
      * @param int $month Month.
      * @return float
      */
-    public function get_total_sales( $year, $month ) {
+    public function get_total_sales( int $year, int $month ): float {
         $args = array(
             'limit'      => -1,
             'status'     => $this->get_valid_order_statuses(),
@@ -173,7 +173,7 @@ class StatisticsService implements StatisticsInterface {
      * @param int $month Month.
      * @return int
      */
-    public function get_total_deals( $year, $month ) {
+    public function get_total_deals( int $year, int $month ): int {
         $args = array(
             'limit'      => -1,
             'status'     => $this->get_valid_order_statuses(),
@@ -191,7 +191,7 @@ class StatisticsService implements StatisticsInterface {
      * @param int $month Month.
      * @return float
      */
-    public function get_total_cost_price( $year, $month ) {
+    public function get_total_cost_price( int $year, int $month ): float {
         $args = array(
             'limit'      => -1,
             'status'     => $this->get_valid_order_statuses(),
@@ -225,7 +225,7 @@ class StatisticsService implements StatisticsInterface {
      * @param int $month Month.
      * @return string Formatted ROI percentage.
      */
-    public function calculate_roi( $year, $month ) {
+    public function calculate_roi( int $year, int $month ): string {
         $total_sales = $this->get_total_sales($year, $month);
         $pr_budget = $this->settings->get_monthly_value( 'store_metrics_new_pr_budget', $year, $month );
         $additional_costs = $this->settings->get_monthly_value( 'store_metrics_new_additional_costs', $year, $month );
@@ -239,7 +239,7 @@ class StatisticsService implements StatisticsInterface {
      *
      * @return array
      */
-    private function get_valid_order_statuses() {
+    private function get_valid_order_statuses(): array {
         return array(
             'wc-completed',
             'wc-processing',
@@ -254,7 +254,7 @@ class StatisticsService implements StatisticsInterface {
      * @param int $month Month.
      * @return array
      */
-    private function get_date_query( $year, $month ) {
+    private function get_date_query( int $year, int $month ): array {
         return array(
             array(
                 'year'  => $year,

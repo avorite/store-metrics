@@ -19,7 +19,7 @@ interface StatisticsInterface {
      * @param int $limit Limit.
      * @return array
      */
-    public function get_top_products( $year, $month, $limit = 5 );
+    public function get_top_products( int $year, int $month, int $limit = 5 ): array;
 
     /**
      * Get total sales.
@@ -28,7 +28,7 @@ interface StatisticsInterface {
      * @param int $month Month.
      * @return float
      */
-    public function get_total_sales( $year, $month );
+    public function get_total_sales( int $year, int $month ): float;
 
     /**
      * Get total deals.
@@ -37,7 +37,7 @@ interface StatisticsInterface {
      * @param int $month Month.
      * @return int
      */
-    public function get_total_deals( $year, $month );
+    public function get_total_deals( int $year, int $month ): int;
 
     /**
      * Calculate ROI.
@@ -46,5 +46,5 @@ interface StatisticsInterface {
      * @param int $month Month.
      * @return string Formatted ROI percentage.
      */
-    public function calculate_roi( $year, $month );
+    public function calculate_roi( int $year, int $month ): string;
 } 

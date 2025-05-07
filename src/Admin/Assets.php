@@ -23,7 +23,7 @@ class Assets {
      *
      * @param string $hook_suffix Hook suffix for admin page.
      */
-    public function __construct( $hook_suffix ) {
+    public function __construct( string $hook_suffix ) {
         $this->hook_suffix = $hook_suffix;
         add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_admin_assets' ) );
     }
@@ -34,7 +34,7 @@ class Assets {
      * @param string $hook The current admin page hook.
      * @return void
      */
-    public function enqueue_admin_assets( $hook ) {
+    public function enqueue_admin_assets( string $hook ): void {
         // Load assets only on our plugin admin page.
         if ( $hook !== $this->hook_suffix ) {
             return;

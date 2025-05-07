@@ -39,7 +39,7 @@ class CostPriceManager {
      *
      * @return void
      */
-    public function add_cost_price_field() {
+    public function add_cost_price_field(): void {
         // Prevent adding the field multiple times
         if (self::$field_added) {
             return;
@@ -67,7 +67,7 @@ class CostPriceManager {
      * @param int $post_id Product ID.
      * @return void
      */
-    public function save_cost_price_field( $post_id ) {
+    public function save_cost_price_field( int $post_id ): void {
         $cost_price = isset( $_POST[self::COST_PRICE_META_KEY] ) ? wc_clean( wp_unslash( $_POST[self::COST_PRICE_META_KEY] ) ) : '';
         update_post_meta( $post_id, self::COST_PRICE_META_KEY, $cost_price );
     }
@@ -78,7 +78,7 @@ class CostPriceManager {
      * @param int $product_id Product ID.
      * @return float Cost price or 0 if not set.
      */
-    public function get_product_cost_price( $product_id ) {
+    public function get_product_cost_price( int $product_id ): float {
         $cost_price = get_post_meta( $product_id, self::COST_PRICE_META_KEY, true );
         return ! empty( $cost_price ) ? floatval( $cost_price ) : 0;
     }

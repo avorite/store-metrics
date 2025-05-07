@@ -57,7 +57,7 @@ class Plugin {
      *
      * @return void
      */
-    public function init() {
+    public function init(): void {
         // Check if WooCommerce is active.
         if ( ! defined( 'WC_VERSION' ) ) {
             add_action( 'admin_notices', array( $this, 'woocommerce_inactive_notice' ) );
@@ -76,7 +76,7 @@ class Plugin {
      *
      * @return void
      */
-    public function load_textdomain() {
+    public function load_textdomain(): void {
         $locale = determine_locale();
         $locale = apply_filters( 'plugin_locale', $locale, 'store-metrics' );
 
@@ -90,7 +90,7 @@ class Plugin {
      *
      * @return void
      */
-    private function load_dependencies() {
+    private function load_dependencies(): void {
         // Initialize settings.
         $this->settings = new SettingsManager();
         
@@ -115,7 +115,7 @@ class Plugin {
      *
      * @return void
      */
-    public function woocommerce_inactive_notice() {
+    public function woocommerce_inactive_notice(): void {
         if ( ! current_user_can( 'activate_plugins' ) ) {
             return;
         }

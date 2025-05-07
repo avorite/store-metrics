@@ -16,7 +16,7 @@ interface SettingsInterface {
      *
      * @return void
      */
-    public function register_settings();
+    public function register_settings(): void;
 
     /**
      * Get monthly value.
@@ -26,5 +26,5 @@ interface SettingsInterface {
      * @param int $month Month.
      * @return float
      */
-    public function get_monthly_value( $option_name, $year, $month );
+    public function get_monthly_value( string $option_name, int $year, int $month ): float;
 } 

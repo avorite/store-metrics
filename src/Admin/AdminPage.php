@@ -46,7 +46,12 @@ class AdminPage {
         $this->settings = $settings;
     }
 
-    public function hook_menu() {
+    /**
+     * Hook into admin menu action.
+     *
+     * @return void
+     */
+    public function hook_menu(): void {
         add_action('admin_menu', array($this, 'register_admin_menu'));
     }
 
@@ -55,7 +60,7 @@ class AdminPage {
      *
      * @return void
      */
-    public function register_admin_menu() {
+    public function register_admin_menu(): void {
         if (!current_user_can('manage_woocommerce')) {
             return;
         }
@@ -75,7 +80,7 @@ class AdminPage {
      *
      * @return string
      */
-    public function get_hook_suffix() {
+    public function get_hook_suffix(): string {
         return $this->hook_suffix;
     }
 
@@ -84,7 +89,7 @@ class AdminPage {
      *
      * @return void
      */
-    public function admin_page_callback() {
+    public function admin_page_callback(): void {
         if (!current_user_can('manage_woocommerce')) {
             wp_die(__('You do not have sufficient permissions to access this page.', 'store-metrics'));
         }

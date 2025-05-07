@@ -3,7 +3,7 @@
  * Plugin Name: Store Metrics
  * Plugin URI: https://greenlime.co.il
  * Description: Plugin for displaying store statistics – most popular product, total sales, total deals, and ROI.
- * Version: 2.1.16
+ * Version: 1.0.0
  * Author: Maxim Shyian
  * Author URI: https://greenlime.co.il
  * License: GPL-2.0+

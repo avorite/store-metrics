@@ -38,7 +38,7 @@ class StatisticsCalculator {
      * @param float $additional_costs Additional costs.
      * @return string Formatted ROI percentage.
      */
-    public function calculate_roi( $total_sales, $total_cost_price, $pr_budget, $additional_costs ) {
+    public function calculate_roi( float $total_sales, float $total_cost_price, float $pr_budget, float $additional_costs ): string {
         $investment = $pr_budget + $total_cost_price + $additional_costs;
         
         if ( $investment <= 0 ) {
