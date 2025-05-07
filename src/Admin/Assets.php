@@ -43,23 +43,23 @@ class Assets {
         // Get plugin version for cache busting
         $version = defined('STORE_METRICS_VERSION') ? STORE_METRICS_VERSION : '1.0.0';
 
-        // Енкуимо стили с указанием версии для сброса кэша
+        // Enqueue styles with version for cache busting
         wp_enqueue_style(
             'store-metrics-admin-style',
             plugin_dir_url( dirname( __FILE__, 2 ) ) . 'admin/css/store-metrics-admin.css',
             array(),
-            $version . '.' . time() // Добавляем timestamp для гарантированного сброса кэша при отладке
+            $version . '.' . time() // Add timestamp for guaranteed cache reset during debugging
         );
 
         wp_enqueue_script(
             'store-metrics-admin-script',
             plugin_dir_url( dirname( __FILE__, 2 ) ) . 'admin/js/store-metrics-admin.js',
             array( 'jquery' ),
-            $version . '.' . time(), // Добавляем timestamp для гарантированного сброса кэша при отладке
+            $version . '.' . time(), // Add timestamp for guaranteed cache reset during debugging
             true
         );
 
-        // Добавим inline комментарий для отладки
+        // Add inline comment for debugging
         wp_add_inline_script('store-metrics-admin-script', 'console.log("Store Metrics: Admin JS loaded successfully!");');
     }
 } 
