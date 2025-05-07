@@ -1,0 +1,81 @@
+/* hub380-admin.css */
+/* Simple styles for the hub380 admin page */
+.wrap h1 {
+    margin-bottom: 20px;
+}
+.widefat {
+    margin-top: 20px;
+}
+
+/* Admin styles for hub380 plugin */
+.wrap {
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.hub380-refresh-form {
+    margin-top: 20px;
+}
+
+.widefat {
+    margin: 20px 0;
+}
+
+.form-table th {
+    width: 200px;
+}
+
+hr {
+    margin: 30px 0;
+    border: 0;
+    height: 1px;
+    background: #ddd;
+}
+
+/* Make numeric inputs wider */
+input[type="number"] {
+    width: 150px;
+}
+
+/* Style the statistics table */
+.widefat td:first-child {
+    font-weight: 600;
+}
+
+.widefat td:last-child {
+    font-family: monospace;
+    font-size: 14px;
+}
+
+/* Period Selection Form */
+.hub380-period-selection {
+    margin: 20px 0;
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+
+.hub380-period-selection select {
+    margin-right: 10px;
+    min-width: 120px;
+}
+
+/* Top Products Table Styles */
+.widefat img {
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.widefat td {
+    vertical-align: middle;
+}
+
+.widefat a {
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.widefat a:hover {
+    color: #2271b1;
+}
