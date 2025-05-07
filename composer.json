@@ -1,0 +1,26 @@
+{
+    "name": "avorite/store-metrics",
+    "description": "Plugin for displaying store statistics - most popular product, total sales, total deals, and ROI",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0+",
+    "autoload": {
+        "psr-4": {
+            "StoreMetrics\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Maxim Shyian",
+            "email": "max.greenlime@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "config": {
+        "optimize-autoloader": true
+    }
+} 

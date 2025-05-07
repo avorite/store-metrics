@@ -2,10 +2,10 @@
 # This file is distributed under the GPL-2.0+.
 msgid ""
 msgstr ""
-"Project-Id-Version: Hub380\n"
+"Project-Id-Version: Store Metrics\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-14 12:00+0000\n"
-"PO-Revision-Date: 2024-03-14 12:00+0000\n"
+"POT-Creation-Date: 2024-05-01 12:00+0000\n"
+"PO-Revision-Date: 2025-05-07 23:45+0300\n"
 "Last-Translator: Maxim Shyian\n"
 "Language-Team: Hebrew\n"
 "Language: he_IL\n"
@@ -13,22 +13,26 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n==2 ? 1 : n>10 && n%10==0 ? 2 : 3);\n"
-"X-Generator: Poedit 3.4.2\n"
-"X-Domain: hub380\n"
+"X-Generator: Poedit 3.6\n"
+"X-Domain: store-metrics\n"
 
+#: src/Plugin.php:130
 msgid "%1$s requires WooCommerce to be active. Please %2$s."
 msgstr "%1$s דורש שוומרס יהיה פעיל. אנא %2$s."
 
+#: src/Plugin.php:132
 msgid "activate WooCommerce"
 msgstr "הפעל את וומרס"
 
+#: src/Plugin.php:147
 msgid "%1$s requires WooCommerce to be installed and active. Please %2$s."
 msgstr "%1$s דורש התקנה והפעלה של וומרס. אנא %2$s."
 
+#: src/Plugin.php:149
 msgid "install WooCommerce"
 msgstr "התקן את וומרס"
 
-msgid "Store Statistics"
+msgid "Store Metrics"
 msgstr "סטטיסטיקת חנות"
 
 msgid "Filter"

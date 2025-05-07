@@ -1,5 +1,5 @@
-/* hub380-admin.css */
-/* Simple styles for the hub380 admin page */
+/* store-metrics-admin.css */
+/* Simple styles for the store-metrics admin page */
 .wrap h1 {
     margin-bottom: 20px;
 }
@@ -7,18 +7,19 @@
     margin-top: 20px;
 }
 
-/* Admin styles for hub380 plugin */
-.wrap {
-    max-width: 1200px;
-    margin: 20px auto;
+/* Admin styles for store-metrics plugin */
+.store-metrics-admin-wrap {
+    max-width: 1000px;
+    margin: 20px;
 }
 
-.hub380-refresh-form {
+.store-metrics-refresh-form {
     margin-top: 20px;
 }
 
 .widefat {
     margin: 20px 0;
+    width: 100%;
 }
 
 .form-table th {
@@ -48,7 +49,7 @@ input[type="number"] {
 }
 
 /* Period Selection Form */
-.hub380-period-selection {
+.store-metrics-period-selection {
     margin: 20px 0;
     padding: 15px;
     background: #fff;
@@ -56,7 +57,7 @@ input[type="number"] {
     box-shadow: 0 1px 1px rgba(0,0,0,.04);
 }
 
-.hub380-period-selection select {
+.store-metrics-period-selection select {
     margin-right: 10px;
     min-width: 120px;
 }

@@ -22,7 +22,7 @@
  * @link       https://greenlime.co.il
  * @since      1.0.0
  *
- * @package    Hub380
+ * @package    store-metrics
  */
 
 // If uninstall not called from WordPress, then exit.
