@@ -8,4 +8,4 @@
 .cursor/
 
 # Ignore Cursor rules files
-*.cursorules 
+*.cursorrules 
