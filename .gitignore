@@ -4,8 +4,6 @@
 # Ignore rar archives
 *.rar
 
-# Ignore .cursor folder
+# Ignore Cursor files and folders
 .cursor/
-
-# Ignore Cursor rules files
-*.cursorrules 
+*.cursorrules
