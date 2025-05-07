@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Hub380
+ * Plugin Name: Store Metrics
  * Plugin URI: https://greenlime.co.il
  * Description: Plugin for displaying store statistics – most popular product, total sales, total deals, and ROI.
  * Version: 1.0.0

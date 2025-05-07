@@ -123,8 +123,8 @@ class Hub380 {
 			return;
 		}
 		$this->hook_suffix = add_menu_page(
-			esc_html__( 'Store Statistics', 'hub380' ),
-			esc_html__( 'Store Statistics', 'hub380' ),
+			esc_html__( 'Store Metrics', 'hub380' ),
+			esc_html__( 'Store Metrics', 'hub380' ),
 			'manage_woocommerce',
 			'hub380',
 			array( $this, 'admin_page_callback' ),
@@ -240,7 +240,7 @@ class Hub380 {
 		$notice = ( isset( $_GET['hub380_notice'] ) ) ? sanitize_text_field( wp_unslash( $_GET['hub380_notice'] ) ) : '';
 		?>
 		<div class="wrap">
-			<h1><?php esc_html_e( 'Store Statistics', 'hub380' ); ?></h1>
+			<h1><?php esc_html_e( 'Store Metrics', 'hub380' ); ?></h1>
 			
 			<?php if ( ! empty( $notice ) ) : ?>
 				<div class="notice notice-success is-dismissible">
