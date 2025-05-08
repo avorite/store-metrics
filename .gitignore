@@ -3,3 +3,6 @@
 
 # Ignore rar archives
 *.rar
+
+# Ignore other files
+*.puml
